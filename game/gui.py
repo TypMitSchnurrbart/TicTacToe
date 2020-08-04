@@ -6,7 +6,7 @@ Creating and updating the GUI
 import sys
 from game.style import get_style
 from game.widgets_play_buttons import create_buttons, move_buttons, click_event_def
-from game.const import GUI_TITLE, X_SCREEN, Y_SCREEN, GUI_HEIGHT, GUI_WIDTH, PLAY_BUTTONS
+from game.const import GUI_TITLE, X_SCREEN, Y_SCREEN, GUI_HEIGHT, GUI_WIDTH
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 

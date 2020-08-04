@@ -117,39 +117,44 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1596534828851">
+    <state x="971" y="194" width="812" height="594" key="#xdebugger.evaluate" timestamp="1596542560090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596534828851" />
-    <state width="1899" height="348" key="GridCell.Tab.0.center" timestamp="1596534828851">
+    <state x="971" y="194" width="812" height="594" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1596542560090" />
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1596548727957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596534828851" />
-    <state width="1899" height="348" key="GridCell.Tab.0.left" timestamp="1596534828850">
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596548727957" />
+    <state width="1899" height="348" key="GridCell.Tab.0.center" timestamp="1596548727957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596534828850" />
-    <state width="1899" height="348" key="GridCell.Tab.0.right" timestamp="1596534828851">
+    <state width="1899" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596548727957" />
+    <state width="1899" height="348" key="GridCell.Tab.0.left" timestamp="1596548727957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596534828851" />
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1596534828851">
+    <state width="1899" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596548727957" />
+    <state width="1899" height="348" key="GridCell.Tab.0.right" timestamp="1596548727957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596534828851" />
-    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1596534828851">
+    <state width="1899" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596548727957" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1596548727958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596534828851" />
-    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1596534828851">
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596548727958" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1596548727957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596534828851" />
-    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1596534828851">
+    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596548727957" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1596548727957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596534828851" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596548727957" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1596548727957">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596548727957" />
   </component>
 </project>
