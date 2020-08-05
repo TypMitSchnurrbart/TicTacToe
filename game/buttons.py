@@ -2,7 +2,7 @@
 Class that describes the buttons
 """
 
-class Buttons():
+class Buttons:
 
     round_counter = 0
 

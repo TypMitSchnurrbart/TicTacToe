@@ -2,7 +2,7 @@
 Stylesheet for PyQt5
 """
 
-from game.const import BUTTON_BACKGROUND_COLOR, WINDOW_BACKGROUND_COLOR
+from game.const import BUTTON_BACKGROUND_COLOR, WINDOW_BACKGROUND_COLOR, SIDE_BUTTON_BACKGROUND, LABEL_BACKGROUND
 
 def get_style():
     """
@@ -15,15 +15,28 @@ def get_style():
     style = """
     
     QMainWindow {{
-        background-color: {1};
+        background-color: {0};
     }}
     
     QPushButton {{
-        background-color: {0};
+        background-color: {1};
         
     }}
     
-    """ .format(BUTTON_BACKGROUND_COLOR, WINDOW_BACKGROUND_COLOR)
+    QPushButton#SideButton {{
+        background-color: {2}
+    }}
+    
+    QLabel {{
+        background-color: {3}
+    }}
+    
+    """ .format(WINDOW_BACKGROUND_COLOR,
+                BUTTON_BACKGROUND_COLOR,
+                SIDE_BUTTON_BACKGROUND,
+                LABEL_BACKGROUND)
+
+
 
     print("Styles applied.")
     return style

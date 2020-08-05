@@ -2,27 +2,18 @@
 Helper File
 """
 
-from game.const import PLAY_BUTTON_OBJ, PLAY_BUTTONS, BUTTON_IMAGE_SIZE
+from game.const import PLAY_BUTTON_OBJ, PLAY_BUTTONS, BUTTON_IMAGE_SIZE, BLUE, RED, LABEL_ARRAY, DRAW_TEXT, TURN_TEXT
+from game.const import VICTORY_TEXT, PATH_BLUE_CIRCLE, PATH_RED_CROSS
 from game.buttons import Buttons
+from game.game_state import game_standby
 from PyQt5 import QtGui, QtCore
 
-def set_game_start():
-    """
-    Prepare the game to play
-    """
-
-    for i in range(0, 9):
-        PLAY_BUTTON_OBJ[i] = Buttons()
-    Buttons.enum_round_counter(True)
-
-    print("It`s blue turn!")
-
-
-def make_move(button, activ_player):
+def make_move(button, activ_player, inactiv_player):
     """
     Makes the move and sets the Button as inactive
     :param button: {str} containing object of play_buttons (list)
     :param activ_player: {str} blue or red
+    :param inactiv_player: {string} blue or red
     :return:
     """
 
@@ -37,10 +28,13 @@ def make_move(button, activ_player):
         PLAY_BUTTON_OBJ[click_cache].set_occupied_by(activ_player)
 
         Buttons.enum_round_counter(False)
-        change_button_look(click_cache, activ_player)
+        game_over = change_button_look(click_cache, activ_player)
+
+        #Only Set Turn Text to next player if game isnt already over
+        if not game_over:
+            LABEL_ARRAY[1].setText(TURN_TEXT.format(inactiv_player))
     else:
         print("This Button is already taken!")
-        # TODO
 
 
 
@@ -52,17 +46,19 @@ def change_button_look(button_index, activ_player):
     :return:
     """
 
-    if activ_player == "blue":
-        PLAY_BUTTONS[button_index].setIcon(QtGui.QIcon("D:\GitHub\TicTacToe\game\graphics\Blue_circle_edit.png"))
+    if activ_player == BLUE:
+        PLAY_BUTTONS[button_index].setIcon(QtGui.QIcon(PATH_BLUE_CIRCLE))
         PLAY_BUTTONS[button_index].setIconSize(QtCore.QSize(BUTTON_IMAGE_SIZE, BUTTON_IMAGE_SIZE))
 
-    else:
-        PLAY_BUTTONS[button_index].setIcon(QtGui.QIcon("D:\GitHub\TicTacToe\game\graphics\Red_cross_edit.png"))
+    elif activ_player == RED:
+        PLAY_BUTTONS[button_index].setIcon(QtGui.QIcon(PATH_RED_CROSS))
         PLAY_BUTTONS[button_index].setIconSize(QtCore.QSize(BUTTON_IMAGE_SIZE, BUTTON_IMAGE_SIZE))
 
     print(Buttons.get_round_counter())
 
-    check_if_end(activ_player)
+    game_over = check_if_end(activ_player)
+
+    return game_over
 
 def check_if_end(activ_player):
     """
@@ -99,17 +95,17 @@ def check_if_end(activ_player):
                 winner_found = True
 
     if winner_found is True:
-        print(f"THE GAME IS FINISHED! {activ_player} WINS!")
+        LABEL_ARRAY[1].setText(VICTORY_TEXT .format(activ_player))
+        game_standby()
+        return True
 
     #Draw Case
-    if counter == 9 and winner_found is False:
-        print("Its a draw!!")
+    elif counter == 9 and winner_found is False:
+        LABEL_ARRAY[1].setText(DRAW_TEXT)
+        game_standby()
+        return True
+
     #No winner found, resturning to game
     else:
-        return
-
-    #TODO Thinking about the end? How is it communicated and how will it be reseted without restarting the gui?
-    #TODO Clear Icons and reset buttons should do the trick also the round_counter
-
-
+        return False
 

@@ -4,12 +4,14 @@ Main start file
 
 #imports
 from game.gui import create_gui
-from game.helper import set_game_start
+from game.game_state import set_game_default
 
 if __name__ == "__main__":
 
+    #Setting up the game environment
+    set_game_default(True)
+
     #Creating the GUI
-    set_game_start()
     print("Initializing a GUI...")
     create_gui()
 

@@ -4,21 +4,21 @@ Game procedure
 
 from game.buttons import Buttons
 from game.helper import make_move
+from game.const import LABEL_ARRAY, BLUE, RED, TURN_TEXT
 
-def button_clicked(button):
+def play_button_clicked(button):
 
     print(button)
-    #TODO Recognice a victory or a draw! Therefore a reset has to happen if player wants so reset!
 
-    #Making the turns
+
+    #Making the turns, BLUE starts TODO maybe chooseable who starts?
     if (Buttons.get_round_counter() % 2) == 0:
-        activ_player = "blue"
-        inactiv_player = "red"
+        activ_player = BLUE
+        inactiv_player = RED
 
     else:
-        activ_player = "red"
-        inactiv_player = "blue"
+        activ_player = RED
+        inactiv_player = BLUE
 
-    print(f"Its {inactiv_player}'s turn!")
-    make_move(button, activ_player)
+    make_move(button, activ_player, inactiv_player)
 
