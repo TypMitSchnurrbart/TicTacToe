@@ -38,6 +38,7 @@ BUTTON_IMAGE_SIZE = 185
 
 BUTTON_ARRAY = []
 RESET_BUTTON_LABEL = "New Player vs. Player Game"
+BOT_BUTTON_LABEL = "New Game against the Computer"
 
 LABEL_ARRAY = []
 MAIN_TEXT = "         Welcome to\n a Game of TicTacToe! "
@@ -48,13 +49,16 @@ MAIN_TEXT_GEO = [772, 40, 405, 100]
 TURN_TEXT_GEO = [772, 200, 405, 100]
 
 RESET_BUTTON_GEO = [950, 400, 200, 80]
+BOT_BUTTON_GEO = [950, 500, 200, 80]
+
+COMBO_BOX_GEO = [1050, 600, 100, 35]
 
 #DisplayedText---------------------------------------------------------------------
 
 BLUE = "Blue"
 RED = "Red"
-DRAW_TEXT = "\t   Booring! It's a draw!"
-VICTORY_TEXT = " The Game Is Over! {0} Wins!"
+DRAW_TEXT = "\tBooring! It's a draw!"
+VICTORY_TEXT = "  The Game Is Over! {0} Wins!"
 
 
 #Style Paramters-------------------------------------------------------------------
@@ -64,8 +68,14 @@ WINDOW_BACKGROUND_COLOR = "#FF9900"
 SIDE_BUTTON_BACKGROUND = "#FA6921"
 LABEL_BACKGROUND = "#F8F349"
 
+FONT = "Helvetica"
+
 #Path------------------------------------------------------------------------------
 
 PATH_WINDOW_ICON = "D:\GitHub\TicTacToe\game\graphics\Window_Icon.png"
 PATH_RED_CROSS = "D:\GitHub\TicTacToe\game\graphics\Red_cross_edit.png"
 PATH_BLUE_CIRCLE = "D:\GitHub\TicTacToe\game\graphics\Blue_circle_edit.png"
+
+#Bot-------------------------------------------------------------------------------
+
+HORST = []

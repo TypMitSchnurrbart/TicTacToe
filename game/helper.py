@@ -18,25 +18,33 @@ def make_move(button, activ_player, inactiv_player):
     """
 
     click_cache = 0
+    button_taken = False
+    game_over = False
 
+    #Searching for the right index to button
     for i in range(0, 9):
         if button == str(PLAY_BUTTONS[i]):
             click_cache = i
 
+    #If buttons not already taken, set it taken
     if PLAY_BUTTON_OBJ[click_cache].get_is_occupied() is False:
         PLAY_BUTTON_OBJ[click_cache].set_is_occupied(True)
         PLAY_BUTTON_OBJ[click_cache].set_occupied_by(activ_player)
 
+        #Roundcounter + 1 and changing button graphic; also check if winner
         Buttons.enum_round_counter(False)
         game_over = change_button_look(click_cache, activ_player)
 
         #Only Set Turn Text to next player if game isnt already over
         if not game_over:
             LABEL_ARRAY[1].setText(TURN_TEXT.format(inactiv_player))
+
+    #If buttons is already taken
     else:
         print("This Button is already taken!")
+        button_taken = True
 
-
+    return game_over, button_taken
 
 def change_button_look(button_index, activ_player):
     """
@@ -46,16 +54,20 @@ def change_button_look(button_index, activ_player):
     :return:
     """
 
+    #Blue Circle is getting set
     if activ_player == BLUE:
         PLAY_BUTTONS[button_index].setIcon(QtGui.QIcon(PATH_BLUE_CIRCLE))
         PLAY_BUTTONS[button_index].setIconSize(QtCore.QSize(BUTTON_IMAGE_SIZE, BUTTON_IMAGE_SIZE))
 
+    #Red Cross is getting set
     elif activ_player == RED:
         PLAY_BUTTONS[button_index].setIcon(QtGui.QIcon(PATH_RED_CROSS))
         PLAY_BUTTONS[button_index].setIconSize(QtCore.QSize(BUTTON_IMAGE_SIZE, BUTTON_IMAGE_SIZE))
 
+    #Check round counter in console
     print(Buttons.get_round_counter())
 
+    #Check if game is over
     game_over = check_if_end(activ_player)
 
     return game_over
@@ -105,7 +117,7 @@ def check_if_end(activ_player):
         game_standby()
         return True
 
-    #No winner found, resturning to game
+    #No winner found, returning to game
     else:
         return False
 
